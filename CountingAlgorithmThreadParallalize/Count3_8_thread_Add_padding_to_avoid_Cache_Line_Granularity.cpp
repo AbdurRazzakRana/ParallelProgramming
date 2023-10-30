@@ -7,8 +7,15 @@
 #include <mutex>
 using namespace std;
 
+struct padded_int {
+int value;
+char padding[60];
+} private_count[8];
+
 vector<int> array_3;
 int t, length, count;
+
+mutex m;
 
 void count3s_thread(int thread_number)
 {
@@ -22,9 +29,13 @@ void count3s_thread(int thread_number)
     {
         if (array_3[i] == 3)
         {
-            count++;
+            private_count[thread_number].value++;
         }
     }
+    m.lock();
+    count+=private_count[thread_number].value;
+    m.unlock();
+
     auto currentTime_end = chrono::system_clock::now();
     auto millis_end = chrono::duration_cast<chrono::milliseconds>(currentTime_end.time_since_epoch()).count();
     auto execTime = millis_end - millis_start;
@@ -46,7 +57,7 @@ int main()
     vector<thread> threads;
     read_generated_random_numbers();
 
-    t = 4;
+    t = 8;
     length = array_3.size();
     count = 0;
     cout << "Length of Array: " << length << endl;

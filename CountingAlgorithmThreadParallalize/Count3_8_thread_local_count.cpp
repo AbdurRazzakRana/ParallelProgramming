@@ -54,7 +54,7 @@ int main()
     read_generated_random_numbers();
     // array_3 = {2,3,0,2,3,3,1,0,0,1,3,2,2,3,1,0};
 
-    t = 4;
+    t = 8;
     length = array_3.size();
     count = 0;
     cout << "Length of Array: " << length << endl;

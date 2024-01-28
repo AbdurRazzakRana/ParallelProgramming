@@ -14,7 +14,7 @@ Here, 3256 number of times the three is in the array.
 3. Preparing MPI with 4 nodes connected in the host file.
 
 # Running the codes:
-Please find the 5 parallel codes inside the Codes directory and execute the following instructions to execute the codes. Assuming each executible will run 16 threads and 10,000 of array size.
+Please find the 5 parallel codes inside the Codes directory and follow the instructions to execute the codes. Assuming each executable will run 16 threads and 10,000 of array size.
 
 C++:<br>
 g++ ep_c_threads.cpp -o thread<br>
@@ -55,7 +55,8 @@ Graph 3: Let us compare them with CUDA performance. In this picture, when the da
 In my honest opinion, It depends on the dataset size. If the data is small then, C-thread and OpenMP would be better than others. Because we can scale the code in more detail and delicate level that enhances the performance such as padding. Also, introducing a lot of processing a small number of data would increase communication overhead rather than reducing the runtime. However, when the data is huge, then we need more and more parallel processors rather than a small number of perfect and optimized c-threads. Therefore, CUDA with I think goto tool for really large numbers of data, and c-thread or OpenMP for small parallelism or fixed parallelism.
 
 # Conclusion:
-This performance evaluation in different platforms was interesting. It nicely explained how various platforms of threads can differ based on the dataset. Also, the graph that how too many threads would cost a high communication overhead between the nodes. C++ Threads provides more explicit and fine-grained control over threads compared to OpenMP. It is suitable for scenarios where precise control over synchronization, data sharing, and thread lifecycle is crucial.<br>
+This performance evaluation in different platforms was interesting. It nicely explained how various platforms of threads can differ based on the dataset. Also, the graph that how too many threads would cost a high communication overhead between the nodes.<br>
+C++ Threads provides more explicit and fine-grained control over threads compared to OpenMP. It is suitable for scenarios where precise control over synchronization, data sharing, and thread lifecycle is crucial.<br>
 OpenMP: It provides an easy way to run code in parallel.<br>
 CUDA: CUDA has Nvidia GPUs. It offers a massive number of parallel applications. CUDA provides high-performance parallelism on compatible Nvidia hardware.<br>
 Java Multithreading: Java Multithreading, with its built-in support for threads and synchronization, offers a platform-independent approach to parallelism. However, it is slow compared to others.

@@ -14,7 +14,24 @@ Here, 3256 number of times the three is in the array.
 3. Preparing MPI with 4 nodes connected in the host file.
 
 # Running the codes:
-Please find the 5 parallel codes inside the Codes directory and execute the following instructions to execute the codes
-## C++ file:
+Please find the 5 parallel codes inside the Codes directory and execute the following instructions to execute the codes. Assuming each executible will run 16 threads and 10,000 of array size.
+
+C++:
 g++ ep_c_threads.cpp -o cthread
-./cthread 16 
+./cthread 16 10000
+
+Java:
+javac EvaluatePerformanceJavaThreads.java
+java EvaluatePerformanceJavaThreads 16 10000
+
+MPI:
+mpirun -n 16 -hostfile host_file --mca routed direct ./ep_mpi 10000
+
+OpenMP:
+g++ ep_c_openMP.cpp -o openmp -fopenmp
+./openmp 16 10000
+
+Cuda:
+nvcc ep_c_cuda.cu -o cuda
+./cuda 10000
+[Note: in Cuda, maximum possible blocks and grids are used to process the input]

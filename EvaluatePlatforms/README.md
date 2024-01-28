@@ -1,6 +1,7 @@
 # Introduction
 In the realm of computing, where diverse platforms offer parallelism, a thorough evaluation becomes imperative. Testing these platforms with various datasets is a crucial step in discerning their capabilities. This multifaceted assessment involves subjecting each platform to rigorous scrutiny to analyze their performance under distinct conditions. Finally, by meticulously gauging the runtime intricacies, one can make an informed decision on the optimal platform for specific purposes. This comprehensive evaluation ensures that the chosen platform aligns seamlessly with the intended tasks, maximizing efficiency and performance in parallel processing scenarios.
 
-# Platforms Evaluated: Cuda, OpenMP, MPI with Cluter of Servers, Java, C with Threads
+# Platforms Evaluated: 
+Cuda, OpenMP, MPI with Cluter of Servers, Java, C with Threads
 
 

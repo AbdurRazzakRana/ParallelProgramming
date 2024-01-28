@@ -41,3 +41,9 @@ Graph 1: When the array size is 10k, the same array is run with 4 algorithms:  C
 
 As we can see MPI and Java threads are performing badly because MPI works with an Inter-Process Communication messaging technique in which process communication always adds overhead. C-threads and OpenMP are performing a way better.
 ![Comparison of 10k dataset with 4 algorithms and their execution time](https://github.com/AbdurRazzakRana/ParallelProgramming/blob/main/EvaluatePlatforms/Output_Graphs/10k_Data_4_Algo_Comp.png)
+
+
+Graph 2: Compares runtime of same 4 algorithms with 100k dataset. When the data set increased, MPI’s execution time became reduced and closer to the C-threads or OpenMP runtime. As we can see C-threads and OpenMP are performing better regardless of the scenarios whether the data size is big or small.
+![Comparison in execution time of 100k dataset with 4 algorithms](https://github.com/AbdurRazzakRana/ParallelProgramming/blob/main/EvaluatePlatforms/Output_Graphs/100K_Data_4_Algo_Comp.png)
+
+

@@ -20,18 +20,18 @@ C++:<br>
 g++ ep_c_threads.cpp -o thread<br>
 ./cthread 16 10000
 
-Java:
-javac EvaluatePerformanceJavaThreads.java
+Java:<br>
+javac EvaluatePerformanceJavaThreads.java<br>
 java EvaluatePerformanceJavaThreads 16 10000
 
-MPI:
+MPI:<br>
 mpirun -n 16 -hostfile host_file --mca routed direct ./ep_mpi 10000
 
-OpenMP:
-g++ ep_c_openMP.cpp -o openmp -fopenmp
+OpenMP:<br>
+g++ ep_c_openMP.cpp -o openmp -fopenmp <br>
 ./openmp 16 10000
 
-Cuda:
-nvcc ep_c_cuda.cu -o cuda
-./cuda 10000
+Cuda:<br>
+nvcc ep_c_cuda.cu -o cuda <br>
+./cuda 10000<br>
 [Note: in Cuda, maximum possible blocks and grids are used to process the input]

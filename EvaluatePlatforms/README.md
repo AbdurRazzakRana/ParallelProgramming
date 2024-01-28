@@ -40,4 +40,4 @@ nvcc ep_c_cuda.cu -o cuda <br>
 Graph 1: When the array size is 10k, the same array is run with 4 algorithms:  Cpp, Java, MPI and OpenMP. Cuda is not comparable with them and that is why, to make a fair comparison, it is excluded.
 
 As we can see MPI and Java threads are performing badly because MPI works with an Inter-Process Communication messaging technique in which process communication always adds overhead. C-threads and OpenMP are performing a way better.
-![Comparison of 10k dataset with 4 algorithms and their execution time](Output_graphs/10k_Data_4_Algo_Comp.png)
+![Comparison of 10k dataset with 4 algorithms and their execution time](https://github.com/AbdurRazzakRana/ParallelProgramming/blob/main/EvaluatePlatforms/Output_Graphs/10k_Data_4_Algo_Comp.png)

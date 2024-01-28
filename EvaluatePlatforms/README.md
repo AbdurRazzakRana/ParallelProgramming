@@ -47,3 +47,7 @@ Graph 2: Compares runtime of same 4 algorithms with 100k dataset. When the data 
 ![Comparison in execution time of 100k dataset with 4 algorithms](https://github.com/AbdurRazzakRana/ParallelProgramming/blob/main/EvaluatePlatforms/Output_Graphs/100K_Data_4_Algo_Comp.png)
 
 
+Graph 3: Let us compare them with CUDA performance. In this picture, when the dataset increases a lot, then a fixed number of parallelisms like c-threads cannot offer good performance though it is more optimized and performs better than other fixed-size parallel platforms. Cuda shows much improvement as it is running with a high number of threads such as 768 blocks and 96 grids. Although there is some communication overhead involved for the inclusion of such high threads when the dataset is super high, these communication costs are negligible, and involving a high number or parallelism is effective in that case.
+![Comparison in execution time between Cuda and Optimized CPP over the dataset change](https://github.com/AbdurRazzakRana/ParallelProgramming/blob/main/EvaluatePlatforms/Output_Graphs/Cuda_vs_OptimizedC.png)
+
+

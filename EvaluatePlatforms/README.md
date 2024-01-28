@@ -16,8 +16,8 @@ Here, 3256 number of times the three is in the array.
 # Running the codes:
 Please find the 5 parallel codes inside the Codes directory and execute the following instructions to execute the codes. Assuming each executible will run 16 threads and 10,000 of array size.
 
-C++:
-g++ ep_c_threads.cpp -o cthread
+C++:<br>
+g++ ep_c_threads.cpp -o thread<br>
 ./cthread 16 10000
 
 Java:

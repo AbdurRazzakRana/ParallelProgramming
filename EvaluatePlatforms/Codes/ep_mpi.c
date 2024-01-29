@@ -10,7 +10,6 @@ Input-output: This mpi program will make a cluster of 5 nodes from
   execution time. The server names are written in host_files file.
 */
 
-
 #include <mpi.h>
 #include <stdio.h>
 #include <time.h>

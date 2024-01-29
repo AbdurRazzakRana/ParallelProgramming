@@ -1,3 +1,14 @@
+/*
+Author: Abdur Razzak
+Date: Dec 10, 2023
+Course: Parallel Programming
+Input-output: This OpenMP program will take input the number
+    of parallel threads and input size from file. Then the threads
+    will calculate how many 3 they have among the portion of array
+    they received. At the end it prints the count of 3 and the
+    execution time.
+*/
+
 #include <iostream>
 #include <vector>
 #include <fstream>

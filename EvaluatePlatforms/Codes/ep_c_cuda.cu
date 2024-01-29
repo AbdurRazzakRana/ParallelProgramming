@@ -1,3 +1,12 @@
+/*
+Author: Abdur Razzak
+Date: Dec 10, 2023
+Course: Parallel Programming
+Input-output: This cuda program will take input of numbers
+    from a file, and count number of 3's in parallel.
+    The grid and block sizes are set to maximum
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <device_launch_parameters.h>
